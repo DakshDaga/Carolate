@@ -32,7 +32,7 @@ const PRODUCTS = [
   {
     id: 'gift',
     name: 'Gift Pack',
-    subtitle: 'All Three Varieties',
+    subtitle: 'All Varieties',
     description: 'A curated trio — the perfect way to introduce someone to Carolate.',
     price: 'Ask to order',
     tag: 'GIFT',
