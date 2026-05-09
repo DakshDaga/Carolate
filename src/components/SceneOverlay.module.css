@@ -1,0 +1,36 @@
+.overlay {
+  position: fixed;
+  bottom: 15vh;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--phase-color, #fdf8f0);
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 40px var(--phase-color, #fdf8f0);
+  margin-bottom: 0.5rem;
+}
+
+.sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: rgba(253, 248, 240, 0.6);
+  text-transform: uppercase;
+}

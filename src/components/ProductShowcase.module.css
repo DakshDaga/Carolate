@@ -1,0 +1,177 @@
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 8rem 6vw;
+  background: linear-gradient(to bottom, #050303 0%, #0d0806 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: #c9982a;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: #fdf8f0;
+  opacity: 0;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #7a6e5c;
+  opacity: 0;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  position: relative;
+  background: linear-gradient(145deg, #0e0905, #170f07);
+  border: 1px solid rgba(201, 152, 42, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.015);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 40px var(--accent, #c9982a)22;
+  border-color: rgba(201, 152, 42, 0.3);
+}
+
+.tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #050303;
+  background: var(--accent, #c9982a);
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+}
+
+.imageWrap {
+  position: relative;
+  padding: 2rem 2rem 0;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08) rotate(-2deg);
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6)) brightness(1.05);
+}
+
+.imageGlow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 60px;
+  background: radial-gradient(ellipse, var(--accent, #c9982a)22, transparent 70%);
+  pointer-events: none;
+}
+
+.cardBody {
+  padding: 1.5rem 1.75rem 2rem;
+}
+
+.cardSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--accent, #c9982a);
+  margin-bottom: 0.4rem;
+}
+
+.cardTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fdf8f0;
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: #7a6e5c;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.price {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #5a4e3c;
+  font-style: italic;
+}
+
+.orderBtn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent, #c9982a);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.orderBtn:hover {
+  border-color: var(--accent, #c9982a);
+  color: #f0c040;
+}

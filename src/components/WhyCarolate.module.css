@@ -1,0 +1,76 @@
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 8rem 6vw;
+  background: #050303;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: #c9982a;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: #fdf8f0;
+  opacity: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+.reasonCard {
+  padding: 2rem;
+  border: 1px solid rgba(201, 152, 42, 0.1);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0d0806 0%, #0a0603 100%);
+  opacity: 0;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reasonCard:hover {
+  border-color: rgba(201, 152, 42, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.iconWrap {
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+  line-height: 1;
+}
+
+.reasonTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fdf8f0;
+  margin-bottom: 0.7rem;
+}
+
+.reasonDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: #7a6e5c;
+  line-height: 1.7;
+}

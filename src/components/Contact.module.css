@@ -1,0 +1,152 @@
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 8rem 6vw 0;
+  background: linear-gradient(to bottom, #050303 0%, #0a0603 60%, #050303 100%);
+  overflow: hidden;
+}
+
+.bgDeco {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(201, 152, 42, 0.07) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: #c9982a;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 700;
+  color: #fdf8f0;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+}
+
+.sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #7a6e5c;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  opacity: 0;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btnInstagram {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(131, 58, 180, 0.35);
+}
+
+.btnInstagram:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 50px rgba(131, 58, 180, 0.5);
+}
+
+.btnWhatsApp {
+  background: linear-gradient(135deg, #128C7E, #25D366);
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.25);
+}
+
+.btnWhatsApp:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 50px rgba(37, 211, 102, 0.4);
+}
+
+.handle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(201, 152, 42, 0.5);
+  letter-spacing: 0.15em;
+  font-style: italic;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(201, 152, 42, 0.08);
+  padding: 2rem 6vw;
+  opacity: 0;
+}
+
+.footerInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footerBrand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #c9982a;
+}
+
+.footerDivider {
+  color: rgba(201, 152, 42, 0.3);
+}
+
+.footerTagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #5a4e3c;
+}
+
+.footerCopy {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #3a3028;
+}

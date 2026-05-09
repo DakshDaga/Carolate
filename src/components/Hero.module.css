@@ -1,0 +1,123 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(201, 152, 42, 0.18) 0%,
+    rgba(93, 38, 12, 0.12) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  color: #c9982a;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 700;
+  color: #fdf8f0;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  margin: 0;
+  opacity: 0;
+  /* Gold shimmer effect */
+  background: linear-gradient(
+    135deg,
+    #fdf8f0 0%,
+    #f0c040 35%,
+    #fdf8f0 50%,
+    #c9982a 65%,
+    #fdf8f0 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 6s linear infinite 2.5s;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.tagline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  color: #c8bfaa;
+  margin-top: 1rem;
+  opacity: 0;
+}
+
+.tagline em {
+  font-style: italic;
+  color: #c9982a;
+}
+
+/* Scroll indicator */
+.scrollHint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  z-index: 2;
+}
+
+.scrollText {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(201, 152, 42, 0.6);
+  text-transform: uppercase;
+}
+
+.scrollDot {
+  display: none;
+}
+
+.scrollCircle {
+  animation: scrollBounce 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { cy: 10; opacity: 0.8; }
+  50% { cy: 22; opacity: 0.3; }
+}

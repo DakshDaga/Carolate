@@ -1,0 +1,79 @@
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 10rem 6vw;
+  background: #0a0806;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '"';
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20rem;
+  color: rgba(201, 152, 42, 0.03);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: #c9982a;
+  margin-bottom: 3rem;
+  opacity: 0;
+  text-transform: uppercase;
+}
+
+.mainQuote {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: #fdf8f0;
+  margin-bottom: 4rem;
+  line-height: 1.3;
+  opacity: 0;
+}
+
+.highlightItalic {
+  font-style: italic;
+  color: #c9982a;
+}
+
+.narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.paragraph {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #d4cfc5;
+  line-height: 1.8;
+  margin: 0;
+  opacity: 0;
+}
+
+.highlight {
+  color: #c9982a;
+}
+
+@media (max-width: 768px) {
+  .breakDesktop {
+    display: none;
+  }
+}
